@@ -1,0 +1,200 @@
+body {
+  background-color: white;
+  margin: auto;
+  width: 100%;
+  padding: 100px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+#bookList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  padding: 16px;
+  text-align: center;
+  margin: auto;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card p {
+  margin: 8px 0;
+}
+
+.card button {
+  margin-top: 8px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.remove-button {
+  background-color: #f44336;
+  color: white;
+}
+
+#bookList li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -20px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  margin-top: px;
+}
+
+#bookList li:nth-child(even) {
+  background-color: rgb(255, 255, 255);
+}
+
+#title,
+#author,
+#isbn,
+#publisher,
+#pages,
+#quantity,
+#price {
+  margin-bottom: 20px;
+  width: 30%;
+  height: 20px;
+}
+
+form {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.add-btn {
+  height: 20px;
+  width: 50px;
+  margin-left: 310px;
+}
+
+.form-title {
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.contact-title {
+  margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.contact-text {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.left-text {
+  margin-right: 240px;
+}
+
+.contact-info {
+  margin-top: 35px;
+  text-align: left;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.li1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.luxon {
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+.nav {
+  background-color: green;
+  width: 85%;
+  font-weight: bold;
+  position: fixed;
+  top: 10px;
+  color: white;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list {
+  display: flex;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.list li a {
+  text-decoration: none;
+  padding: 5px;
+  color: white;
+}
+
+.nav-title {
+  padding: 14px;
+  list-style: none;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.add-new {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+
+}
+
+footer {
+  background-color: green;
+  position: fixed;
+  color: white;
+  bottom: 10px;
+  width: 85%;
+}
+
+.footer {
+  padding: 7px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+div[id^="list-content"],
+div[id^="contact-content"],
+div[id^="add-new-content"] {
+  display: none;
+}
+
+div[id^="list-content"]:target,
+div[id^="contact-content"]:target,
+div[id^="add-new-content"]:target {
+  display: block;
+}

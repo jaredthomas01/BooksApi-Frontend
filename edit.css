@@ -1,0 +1,41 @@
+body {
+    background-color: orange;
+    margin: auto;
+    width: 100%;
+    padding: 100px;
+    box-sizing: border-box;
+}
+
+#edit-container {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    border: 1px solid black;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#edit-form div {
+    margin-bottom: 10px;
+}
+
+#edit-form label {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+#edit-form input {
+    width: 40%;
+    padding: 5px;
+}
+
+#edit-form button {
+    margin-left: 39%;
+    padding: 0px;
+    font-size: 5vh;
+    cursor: pointer;
+    font-size: 20px;
+}

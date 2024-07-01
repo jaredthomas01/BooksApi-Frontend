@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Byte Genius Books</title>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-bar">
+      <a href="#" class="nav-title">Byte Genius Library</a>
+      <ul class="list">
+       <li><a href="#list-content"> List</a></li> 
+       <li><a href="#add-new-content" class="add-new">Add new</a></li> 
+       <li><a href="#contact-content">Contact</a></li> 
+      </ul>
+    </div>
+  </nav>
+
+  <div class="luxon">
+    <span class="date">time</span>
+  </div>
+
+  <div id="list-content">
+    <h1>Byte Genius Library</h1>
+    <ul id="bookList"></ul>
+  </div>
+  
+  <div id="add-new-content">
+    <h1 class="form-title"> Add a new Book</h1>
+    <form id="add-book-form" action="#list-content">
+      <input type="text" placeholder="Title" id="title" required><br>
+      <input type="text" placeholder="Author" id="author" required><br>
+      <input type="text" placeholder="Isbn" id="isbn" required><br>
+      <input type="text" placeholder="Publisher" id="publisher" required><br>
+      <input type="text" placeholder="Pages" id="pages" required><br>
+      <input type="text" placeholder="quantity" id="quantity" required><br>
+      <input type="text" placeholder="price" id="price" required><br>
+      <button type="submit" class="add-btn">Add</button>
+    </form>
+  </div>
+
+  <div id="contact-content">
+    <h1 class="contact-title">Contact Information</h1>
+    <div class="contact-text">
+      <p>Do you have any questions which you may need help with?  </p>
+      <p class="left-text">You can reach us out on:</p>
+      <ul class="contact-info">
+        <li class="li1">
+        <b>LinkedIn:</b> 
+          <a href="https://www.linkedin.com/in/jared-thomas-441834258">Jared Thomas</a>
+        </li>
+        <li class="li1">
+         <b>Twitter:</b> 
+          <a href="https://twitter.com/jinela001">Byte Genius</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer">Copyright@2024 by Jared Thomas </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="luxon.js"></script>
+</body>
+</html>
