@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(data => {
       data.forEach(book => {
-        Book.createCard(new Book(book.title, book.author, book.isbn, book.publisher, book.pages, book.quantity, book.price, book.id));
+        Book.createCard(new Book(book.title, book.author, book.isbn, book.publisher, book.pages, book.quantity, book.price, book.id, book.image));
       });
     })
     .catch(error => console.error('Error fetching books:', error));
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 class Book {
-  constructor(title, author, isbn, publisher, pages, quantity, price, id) {
+  constructor(title, author, isbn, publisher, pages, quantity, price, id, image) {
     this.title = title;
     this.author = author;
     this.isbn = isbn;
@@ -29,6 +29,7 @@ class Book {
     this.quantity = quantity;
     this.price = price;
     this.id = id;
+    this.image = image;
   }
 
   static createCard(book) {
@@ -36,6 +37,7 @@ class Book {
     card.setAttribute('class', 'card');
 
     const cardContent = `
+      <p><strong></strong> <img src="${book.image}" alt="${book.title}" style="max-width: 100%; height: auto;" /></p>  
       <h2>${book.title}</h2>
       <p><strong>Author:</strong> ${book.author}</p>
       <p><strong>ISBN:</strong> ${book.isbn}</p>
@@ -73,7 +75,8 @@ class Book {
     const pages = document.getElementById('pages').value;
     const quantity = document.getElementById('quantity').value;
     const price = document.getElementById('price').value;
-    const book = new Book(title, author, isbn, publisher, pages, quantity, price);
+    const image = document.getElementById('image').value;
+    const book = new Book(title, author, isbn, publisher, pages, quantity, price,image);
 
     fetch('http://localhost:7890/Books', { // Replace with the backend URL for posting books
       method: 'POST',
@@ -89,9 +92,9 @@ class Book {
         return response.json();
       })
       .then(data => {
-        Book.createCard(new Book(data.title, data.author, data.isbn, data.publisher, data.pages, data.quantity, data.price, data.id));
+        Book.createCard(new Book(data.title, data.author, data.isbn, data.publisher, data.pages, data.quantity, data.price, data.id, data.image));
         alert('Book added successfully!');
-        window.location.href = 'index.html#list-content'; // Redirect to books list section
+        window.location.href = 'admin.html#list-content'; // Redirect to books list section
       })
       .catch(error => console.error('Error adding book:', error));
   }

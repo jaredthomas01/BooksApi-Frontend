@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('pages').value = book.pages;
                 document.getElementById('quantity').value = book.quantity;
                 document.getElementById('price').value = book.price;
+                document.getElementById('image').value = book.image;
             })
             .catch(error => console.error('Error fetching book details:', error));
     }
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 pages: document.getElementById('pages').value,
                 quantity: document.getElementById('quantity').value,
                 price: document.getElementById('price').value,
+                price: document.getElementById('image').value,
             };
 
             console.log('Updated Book:', updatedBook);
@@ -46,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.json())
             .then(() => {
                 alert('Book updated successfully!');
-                window.location.href = 'index.html#list-content';
+                window.location.href = 'admin.html#list-content';
             })
             .catch(error => console.error('Error updating book:', error));
         });

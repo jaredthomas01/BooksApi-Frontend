@@ -7,6 +7,12 @@
     <title>Edit Book</title>
 </head>
 <body>
+    <nav class="nav">
+        <div class="nav-bar">
+          <h1>Byte Genius</h1>
+        </div>
+      </nav>
+      
     <h1>Edit Book</h1>
     <form id="edit-form">
         <div>
@@ -37,10 +43,16 @@
             <label for="price">Price:</label>
             <input type="number" id="price" name="price" required>
         </div>
+        <div>
+            <label for="image">Image:</label>
+            <input type="text" id="image" name="image" required>
+        </div>
         <button type="submit">Update Book</button>
     </form>
 
-
+    <footer>
+        <div class="footer">Copyright@2024 by Jared Thomas </div>
+      </footer>
     <script src="edit.js"></script>
 </body>
 </html>

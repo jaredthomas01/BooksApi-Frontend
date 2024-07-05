@@ -73,7 +73,8 @@ h1 {
 #publisher,
 #pages,
 #quantity,
-#price {
+#price,
+#image {
   margin-bottom: 20px;
   width: 30%;
   height: 20px;

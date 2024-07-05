@@ -1,5 +1,5 @@
 body {
-    background-color: orange;
+    background-color: white;
     margin: auto;
     width: 100%;
     padding: 100px;
@@ -11,9 +11,35 @@ body {
     text-align: center;
     margin: auto;
     border: 1px solid black;
-    padding: 20px;
+    padding: 10px;
     background-color: white;
     border-radius: 10px;
+}
+.nav {
+    background-color: green;
+    width: 85%;
+    font-weight: bold;
+    position: fixed;
+    top: 10px;
+    color: white;
+  }
+  
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+#title,
+#author,
+#isbn,
+#publisher,
+#pages,
+#quantity,
+#price {
+  margin-bottom: 20px;
+  width: 30%;
+  height: 20px;
+  align-items: center;
 }
 
 #edit-form div {
@@ -39,3 +65,28 @@ body {
     cursor: pointer;
     font-size: 20px;
 }
+footer {
+    background-color: green;
+    position: fixed;
+    color: white;
+    bottom: 10px;
+    width: 85%;
+  }
+  
+  .footer {
+    padding: 7px;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+  
+  div[id^="list-content"],
+  div[id^="contact-content"],
+  div[id^="add-new-content"] {
+    display: none;
+  }
+  
+  div[id^="list-content"]:target,
+  div[id^="contact-content"]:target,
+  div[id^="add-new-content"]:target {
+    display: block;
+  }
