@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   fetch('http://localhost:7890/Books')  
     .then(response => {
+      console.log('Received response:', response); // Log the response
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
       return response.json();
     })
     .then(data => {
+      console.log('Received data:', data); // Log the data
       data.forEach(book => {
         Book.createCard(new Book(book.title, book.author, book.isbn, book.publisher, book.pages, book.quantity, book.price, book.id, book.image));
       });
@@ -76,7 +78,7 @@ class Book {
     const quantity = document.getElementById('quantity').value;
     const price = document.getElementById('price').value;
     const image = document.getElementById('image').value;
-    const book = new Book(title, author, isbn, publisher, pages, quantity, price,image);
+    const book = new Book(title, author, isbn, publisher, pages, quantity, price, null, image);
 
     fetch('http://localhost:7890/Books', { // Replace with the backend URL for posting books
       method: 'POST',
@@ -86,14 +88,17 @@ class Book {
       body: JSON.stringify(book),
     })
       .then(response => {
+        console.log('Received response:', response); // Log the response
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         return response.json();
       })
       .then(data => {
+        console.log('Received data:', data); // Log the data
         Book.createCard(new Book(data.title, data.author, data.isbn, data.publisher, data.pages, data.quantity, data.price, data.id, data.image));
         alert('Book added successfully!');
+        console.log('Book added successfully, redirecting...'); // Log before redirecting
         window.location.href = 'admin.html#list-content'; // Redirect to books list section
       })
       .catch(error => console.error('Error adding book:', error));
