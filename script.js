@@ -59,8 +59,7 @@ function fetchNewArrivals() {
           <div class="stars">
             ${getStars(book.rating)}
           </div>
-          <a href="#" class="btn">add to cart</a>
-
+          <a href="cart.html" class="btn">add to cart</a>
         </div>
 
       `;
@@ -91,7 +90,7 @@ function fetchNewArrivals() {
           },
       },
   });
-}
+}7
 
   function getStars(rating) {
     let stars = '';
@@ -148,7 +147,7 @@ function fetchFeatured() {
           <div class="stars">
             ${getStars(book.rating)}
           </div>
-          <a href="#" class="btn">add to cart</a>
+          <a href="cart.html" class="btn">add to cart</a>
 
         </div>
 
