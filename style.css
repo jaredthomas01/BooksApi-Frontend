@@ -367,6 +367,7 @@ section{
     overflow: hidden;
     border:var(--border);
     text-align: center;
+   height: fit-content;
 }
 
 .featured .featured-slider .box:hover{
@@ -424,6 +425,11 @@ section{
     font-size: 2.2rem;
     color:var(--black);
     padding-top: 1rem;
+}
+
+.featured .featured-slider .box .content .stars i{
+    font-size: 1.5rem;
+    color:var(--green);
 }
 
 .featured .featured-slider .box .content .price span{
@@ -484,21 +490,31 @@ section{
 }
 
 .arrivals .arrivals-slider .box{
-    display: flex;
-    align-items:center;
-    gap:1.5rem;
-    padding:2rem 1rem;
+    margin:2rem 0;
+    position: relative;
+    overflow: hidden;
     border:var(--border);
-    margin:1rem 0;
+    text-align: center;
+   height: auto;
 }
 
 .arrivals .arrivals-slider .box:hover{
     border:var(--border-hover);
 }
 
-.arrivals .arrivals-slider .box .image img{
-    height:15rem;
+.arrivals .arrivals-slider .box .image{
+    padding:1rem;
+    background: linear-gradient(15deg, #eee 30%, #fff 30.1%);
 }
+
+.arrivals .arrivals-slider .box:hover .image{
+    transform: translateY(6rem);
+}
+
+.arrivals .arrivals-slider .box .image img{
+    height: 25rem;
+}
+
 
 .arrivals .arrivals-slider .box .content h3{
     font-size: 2rem;
@@ -508,18 +524,40 @@ section{
 .arrivals .arrivals-slider .box .content .price{
     font-size: 2.2rem;
     color:var(--black);
-    padding-bottom: .5rem;
-}
-
-.arrivals .arrivals-slider .box .content .price span{
-    font-size: 1.5rem;
-    color:var(--light-color);
-    text-decoration: line-through;
+    padding-top: 1rem;
 }
 
 .arrivals .arrivals-slider .box .content .stars i{
     font-size: 1.5rem;
     color:var(--green);
+}
+.arrivals .arrivals-slider .box .icons{
+    border-bottom: var(--border-hover);
+    position: absolute;
+    top:0; left:0; right: 0;
+    background: #fff;
+    z-index: 1;
+    transform: translateY(-105%);
+}
+
+.arrivals .arrivals-slider .box:hover .icons{
+    transform: translateY(0%);
+}
+
+.arrivals .arrivals-slider .box .icons a{
+    color:var(--black);
+    font-size: 2.2rem;
+    padding:1.3rem 1.5rem;
+}
+
+.arrivals .arrivals-slider .box .icons a:hover{
+    background:var(--green);
+    color:#fff;
+}
+
+.arrivals .arrivals-slider .box .content{
+    background:#eee;
+    padding:1.5rem;
 }
 
 .deal{
@@ -577,6 +615,11 @@ section{
     border-radius: 50%;
     object-fit: cover;
 }
+
+.edit-button {
+    background-color: #4CAF50;
+    color: white;
+  }
 
 .reviews .reviews-slider .box h3{
     color:var(--black);
@@ -818,3 +861,160 @@ section{
     }
 
 }
+
+#register_header{
+	background-image:url(../images/register_head_bg.png);
+	background-repeat:repeat-x;
+	height:62px;
+	border:solid 1px #CCC;
+	}
+    .register_header_left{
+		float:left;
+		margin:0px 0px 0px 0px;
+		display:inline;
+		}
+	.register_header_right{
+		float:right;
+		margin:25px 20px 0px 0px;
+		display:inline;
+		}
+.register_content{
+	width:950px;
+	margin:15px auto 15px auto;
+	}
+	.register_top_bg{
+		background-image:url(../images/register_top_bg.gif);
+		background-repeat:no-repeat;
+		height:5px;
+		}
+	.register_mid_bg{
+		border:solid 1px #a3a3a3;
+		border-top:0px;
+		height:32px;
+		}
+	   .register_mid_bg li{
+		   float:left;
+		 }
+	   .register_mid_left{
+		   background-image:url(../images/register_tag_left.gif);
+		   height:32px;
+		   width:207px;
+		   background-repeat:no-repeat;
+		   padding:0px 0px 0px 106px;
+		   font-size:14px;
+		   color:#501500;
+		   font-weight:bold;
+		   line-height:35px;
+		   }
+	 .register_mid_mid{
+		   background-image:url(../images/register_tag_mid.gif);
+		   height:32px;
+		   width:204px;
+		   background-repeat:no-repeat;
+		   padding:0px 0px 0px 115px;
+		   font-size:14px;
+		   line-height:35px;
+		   }
+     .register_mid_right{
+		   background-image:url(../images/register_tag_right.gif);
+		   height:32px;
+		   width:316px;
+		   background-repeat:no-repeat;
+		   font-size:14px;
+		   line-height:35px;
+		   text-align:center;
+		   }
+	.register_top_bg_two_left{
+		float:left;
+		background-image:url(../images/register_cont.gif);
+		width:1px;
+		height:406px;
+		background-repeat:no-repeat;
+		}
+	.register_top_bg_two_right{
+		float:right;
+		background-image:url(../images/register_cont.gif);
+		width:1px;
+		height:406px;
+		background-repeat:no-repeat;
+		}
+.register_top_bg_mid{
+	background-image:url(../images/register_shadow.gif);
+	background-repeat:repeat-x;
+	}
+.register_title_bg{
+	background-image:url(../images/register_pic_01.gif);
+	background-position:123px 30px;
+	background-repeat:no-repeat;
+	padding:42px 0px 0px 202px;
+	color:#C30;
+	}
+.register_dotted_bg{
+	background-image:url(../images/register_dotted.gif);
+	background-repeat:repeat-x;
+	height:1px;
+	margin:0px 20px 20px 20px;
+	}
+.register_message{
+	float:left;
+	}
+.register_row{
+	clear:both;
+	}	
+.register_row dt{
+	float:left;
+	width:200px;
+	height:30px;
+	text-align:right;
+	font-size:14px;
+	}
+.register_row dd{
+	float:left;
+	margin-right:5px;
+	display:inline;
+	}
+.register_input{
+	width:200px;
+	height:18px;
+	border:solid 1px #999;
+	margin:0px 0px 8px 0px;
+	}
+.registerBtn{
+	height:35px;
+	margin:15px 5px 10px 200px;
+	clear:both;
+	}
+/*Signup INPUT STYLE*/
+.Signup_input_Blur{
+	background-color:#fef4d0;
+	width:200px;
+	height:18px;
+	border:solid 1px #999;
+	margin:0px 0px 8px 0px;
+	}
+.Signup_input_Focus{
+	background-color:#f1ffde;
+	width:200px;
+	height:18px;
+	border:solid 1px #999;
+	margin:0px 0px 8px 0px;
+	}
+.Signup_prompt{
+	font-size:12px;
+	color:#999;
+	}
+.Signup_prompt_error{
+	font-size:12px;
+	color:#C8180B;
+	border:solid 1px #999;
+	background-color:#fef4d0;
+	padding:0px 5px 0px 5px;
+	height:18px;
+	}
+.Signup_prompt_ok{
+	background-image:url(../images/register_write_ok.gif);
+	background-repeat:no-repeat;
+	width:15px;
+	height:11px;
+	margin:5px 0px 0px 5px;
+	}

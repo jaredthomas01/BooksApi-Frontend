@@ -16,6 +16,7 @@
       {
         "label": "off"
       }
-    ]
+    ],
+    "meta-viewport": "off"
   }
 }

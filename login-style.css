@@ -1,0 +1,82 @@
+/* Login Form CSS */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+    margin: 0;
+}
+
+.login-form-container {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form-container h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.login-form-container span {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-form-container .box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-form-container .btn {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-form-container .btn:hover {
+    background: #218838;
+}
+
+.login-form-container .checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.login-form-container .checkbox input {
+    margin-right: 5px;
+}
+
+.login-form-container p {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.login-form-container p a {
+    color: #28a745;
+    text-decoration: none;
+}
+
+.login-form-container p a:hover {
+    text-decoration: underline;
+}
