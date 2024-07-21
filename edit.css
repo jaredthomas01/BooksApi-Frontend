@@ -65,20 +65,19 @@ body {
     cursor: pointer;
     font-size: 20px;
 }
-footer {
-    background-color: green;
-    position: fixed;
-    color: white;
-    bottom: 10px;
-    width: 85%;
-  }
-  
-  .footer {
-    padding: 7px;
-    margin-top: 5px;
-    margin-left: 10px;
-  }
-  
+.footer .credit{
+  border-top: var(--border);
+  margin-top: 2rem;
+  padding:0 1rem;
+  padding-top: 2.5rem;
+  font-size: 2rem;
+  color:var(--light-color);
+  text-align: center;
+}
+
+.footer .credit span{
+  color:green;
+}
   div[id^="list-content"],
   div[id^="contact-content"],
   div[id^="add-new-content"] {

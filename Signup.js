@@ -1,4 +1,4 @@
-// JavaScript to handle the form toggles
+
 document.addEventListener('DOMContentLoaded', function() {
     const loginFormContainer = document.querySelector('.login-form-container');
     const signupFormContainer = document.querySelector('.signup-form-container');

@@ -173,20 +173,20 @@ form {
   border-left: 1px solid black;
 
 }
-
-footer {
-  background-color: green;
-  position: fixed;
-  color: white;
-  bottom: 10px;
-  width: 85%;
+.footer .credit{
+  border-top: var(--border);
+  margin-top: 2rem;
+  padding:0 1rem;
+  padding-top: 2.5rem;
+  font-size: 2rem;
+  color:var(--light-color);
+  text-align: center;
 }
 
-.footer {
-  padding: 7px;
-  margin-top: 5px;
-  margin-left: 10px;
+.footer .credit span{
+  color:green;
 }
+
 
 div[id^="list-content"],
 div[id^="contact-content"],

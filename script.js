@@ -195,7 +195,6 @@ function getStars(rating) {
     return stars;
   }
 
-  // Call fetchFeatured when the page loads or when you need to refresh the list
   document.addEventListener('DOMContentLoaded', fetchFeatured);
 
 
