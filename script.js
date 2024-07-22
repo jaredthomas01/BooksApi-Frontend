@@ -47,7 +47,7 @@ function fetchNewArrivals() {
       bookElement.innerHTML = `
       <div class="icons">
                     <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
+                    <a href="wishlist.html" class="fas fa-heart"></a>
                     <a href="#" class="fas fa-eye"></a>
                 </div>
         <div class="image">
@@ -135,7 +135,7 @@ function fetchFeatured() {
       bookElement.innerHTML = `
       <div class="icons">
                     <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
+                    <a href="wishlist.html" class="fas fa-heart"></a>
                     <a href="#" class="fas fa-eye"></a>
                 </div>
         <div class="image">
