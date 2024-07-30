@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('publisher').value = book.publisher;
                 document.getElementById('pages').value = book.pages;
                 document.getElementById('quantity').value = book.quantity;
-                document.getElementById('price').value = book.price;
+                document.getElementById('price').value = parseFloat(book.price).toFixed(2); // Ensure price is displayed as a decimal
                 document.getElementById('image').value = book.image;
             })
             .catch(error => console.error('Error fetching book details:', error));
@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 author: document.getElementById('author').value,
                 isbn: document.getElementById('isbn').value,
                 publisher: document.getElementById('publisher').value,
-                pages: document.getElementById('pages').value,
-                quantity: document.getElementById('quantity').value,
-                price: document.getElementById('price').value,
+                pages: parseInt(document.getElementById('pages').value, 10),
+                quantity: parseInt(document.getElementById('quantity').value, 10),
+                price: parseFloat(document.getElementById('price').value).toFixed(2),
                 image: document.getElementById('image').value,
             };
 

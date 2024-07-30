@@ -65,6 +65,7 @@ body {
     cursor: pointer;
     font-size: 20px;
 }
+
 .footer .credit{
   border-top: var(--border);
   margin-top: 2rem;
