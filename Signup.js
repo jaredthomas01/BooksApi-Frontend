@@ -1,42 +1,28 @@
+document.querySelector('form').addEventListener('submit', async function (event) {
+    event.preventDefault(); // Prevent the default form submission
+    const form = event.target;
 
-document.addEventListener('DOMContentLoaded', function() {
-    const loginFormContainer = document.querySelector('.login-form-container');
-    const signupFormContainer = document.querySelector('.signup-form-container');
+    try {
+        const response = await fetch(form.action, {
+            method: form.method,
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: form.username.value,
+                firstName: form.firstName.value,
+                lastName: form.lastName.value,
+                email: form.email.value,
+                password: form.password.value
+            })
+        });
 
-    const loginBtn = document.getElementById('login-btn');
-    const signupBtn = document.getElementById('signup-btn');
-    const closeLoginBtn = document.getElementById('close-login-btn');
-    const closeSignupBtn = document.getElementById('close-signup-btn');
-    const openSignupForm = document.getElementById('open-signup-form');
-    const openLoginForm = document.getElementById('open-login-form');
-
-    loginBtn.addEventListener('click', () => {
-        loginFormContainer.style.display = 'block';
-        signupFormContainer.style.display = 'none';
-    });
-
-    signupBtn.addEventListener('click', () => {
-        signupFormContainer.style.display = 'block';
-        loginFormContainer.style.display = 'none';
-    });
-
-    closeLoginBtn.addEventListener('click', () => {
-        loginFormContainer.style.display = 'none';
-    });
-
-    closeSignupBtn.addEventListener('click', () => {
-        signupFormContainer.style.display = 'none';
-    });
-
-    openSignupForm.addEventListener('click', (e) => {
-        e.preventDefault();
-        signupFormContainer.style.display = 'block';
-        loginFormContainer.style.display = 'none';
-    });
-
-    openLoginForm.addEventListener('click', (e) => {
-        e.preventDefault();
-        loginFormContainer.style.display = 'block';
-        signupFormContainer.style.display = 'none';
-    });
+        if (response.ok) {
+            alert('User created successfully!');
+        } else {
+            alert('Failed to create user.');
+        }
+    } catch (error) {
+        alert('An error occurred: ' + error.message);
+    }
 });
