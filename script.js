@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // new arrivals section
 
 function fetchNewArrivals() {
-    fetch('http://localhost:7890/Books')
+    fetch('http://localhost:8080/placements')
       .then(response => response.json())
       .then(data => {
         const books = getLatestBooksById(data);
@@ -90,7 +90,7 @@ function fetchNewArrivals() {
           },
       },
   });
-}7
+}
 
   function getStars(rating) {
     let stars = '';
